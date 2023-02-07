@@ -15,6 +15,6 @@ function run_model {
 
 run_file='../src/main.py'
 
-for name in 'mnist' 'dsprites' 'clevr' 'shop'; do
+for name in 'mnist' 'dsprites' 'abstract' 'clevr' 'shop' 'gso'; do
     run_model
 done

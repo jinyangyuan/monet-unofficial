@@ -101,7 +101,7 @@ class Model(snt.AbstractModule):
         with tf.name_scope(name):
             recon = tf.math.reduce_sum(mask * variables['apc'], axis=1)
             segment_all = tf.math.argmax(mask, axis=1)
-            segment_obj = tf.math.argmax(mask[:, 1:], axis=1)
+            segment_obj = tf.math.argmax(mask, axis=1)
             mask_oh_all = tf.one_hot(segment_all, mask.shape[1], axis=1)
             mask_oh_obj = tf.one_hot(segment_obj, mask.shape[1], axis=1)
             pres = tf.math.reduce_max(mask_oh_all, axis=[-3, -2, -1])

@@ -6,22 +6,22 @@ phase_param:
     data_filenames:
       - train.tfrecord
     data_slots: 7
-    num_slots: 8
+    num_slots: 1
   valid:
     data_filenames:
       - valid.tfrecord
     data_slots: 7
-    num_slots: 8
+    num_slots: 1
   test:
     data_filenames:
       - test.tfrecord
     data_slots: 7
-    num_slots: 8
+    num_slots: 1
   general:
     data_filenames:
       - general.tfrecord
     data_slots: 11
-    num_slots: 12
+    num_slots: 1
 
 loss_coef:
   nll:
@@ -61,7 +61,7 @@ enc_channel: [32, 32, 64, 64]
 enc_kernel: [3, 3, 3, 3]
 enc_stride: [2, 2, 2, 2]
 enc_hidden: [256]
-latent_size: 16
+latent_size: 128
 dec_channel: [32, 32, 32, 32]
 dec_kernel: [3, 3, 3, 3]
 dec_shape: [136, 134, 132, 130]
